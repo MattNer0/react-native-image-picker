@@ -327,7 +327,7 @@ RCT_EXPORT_METHOD(launchImageLibrary:(NSDictionary *)options callback:(RCTRespon
 
         if ([info[UIImagePickerControllerMediaType] isEqualToString:(NSString *) kUTTypeImage]) {
             UIImage *image = [ImagePickerManager getUIImageFromInfo:info];
-            NSURL *mediaUrl = [ImagePickerManager getNSURLFromInfo:info]
+            NSURL *mediaUrl = [ImagePickerManager getNSURLFromInfo:info];
             
             [assets addObject:[self mapImageToAsset:image imgUrl:mediaUrl phAsset:asset]];
         } else {
